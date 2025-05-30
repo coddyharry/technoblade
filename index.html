@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="text-white min-h-screen bg-gray-900">
+<nav class="sticky bg-red-900 z-50 top-0 p-4">
+<div class="flex justify-between items-center container mx-auto">
+<h1 class="font-bold text-2xl">Technoblade</h1>
+<div class="gap-6 hidden md:flex">
+<a class="hover:text-yellow-300" href="#about">About</a>
+<a class="hover:text-yellow-300" href="#legacy">Legacy</a>
+<a class="hover:text-yellow-300" href="#quotes">Quotes</a>
+<a class="hover:text-yellow-300" href="#tribute">Tribute</a>
+</div>
+
+
+<button id="menu-btn" class="md:hidden">
+<svg stroke="currentcolor" class="w-6 h-6" viewbox="0 0 24 24" fill="none">
+<path stroke-width="2" d="m4 6h16m-16 6h16m-16 6h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div id="mobile-menu" class="md:hidden hidden container pt-2 mx-auto">
+<a href="#about" class="hover:text-yellow-300 block py-2">About</a>
+<a href="#legacy" class="hover:text-yellow-300 block py-2">Legacy</a>
+<a href="#quotes" class="hover:text-yellow-300 block py-2">Quotes</a>
+<a href="#tribute" class="hover:text-yellow-300 block py-2">Tribute</a>
+</div>
+</nav>
+
+<header class="from-red-900 to-gray-900 bg-gradient-to-b py-20">
+<div class="container px-4 text-center mx-auto">
+<h1 class="text-5xl animate-pulse font-bold md:text-7xl mb-4">Technoblade never dies</h1>
+<p class="text-xl mb-8 md:text-2xl">honoring the legacy of the blood god</p>
+<div class="flex justify-center gap-4">
+<a href="#tribute" class="font-bold rounded-lg px-6 py-2 text-black bg-yellow-500 hover:bg-yellow-600">leave tribute</a>
+<a href="#legacy" class="rounded-lg font-bold hover:bg-gray-600 px-6 py-2 text-white bg-gray-700">learn more</a>
+</div>
+</div>
+</header>
+
+
+<section class="py-16 bg-gray-800" id="about">
+<div class="px-4 container mx-auto">
+<h2 class="text-3xl font-bold mb-8 text-center">About Technoblade</h2>
+<div class="items-center md:flex-row gap-8 flex flex-col">
+<div class="md:w-1/2">
+<div class="shadow-lg rounded-lg bg-gray-700 overflow-hidden">
+<img src="about.png" width="686" height="386" class="w-full h-auto" alt="technoblade">
+<div class="p-4">
+<p class="text-gray-300 text-sm">Alex aka Technoblade 1999-2022</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<p class="mb-4">Technoblade was a straight up legend in the Minecraft scene. dude had cracked PvP skills, razor sharp comeback and a heart big enough to give back whenever he could</p>
+<p class="mb-4">He pulled in over 10m subs and had the whole internet locked in with his dream SMP chaos and bedwars domination and the wild ass potato war saga</p>
+<p>Even when cancer tried to come at him he stood tall and fought that shit like a final boss. Same fire & same grit. Inspired the hell outta millions just by being real and never losing that humor</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="legacy" class="bg-gray-900 py-16">
+<div class="px-4 container mx-auto">
+<h2 class="text-center text-3xl font-bold mb-12">his legacy:</h2>
+<div class="gap-6 grid md:grid-cols-3">
+<div class="rounded-lg bg-gray-800 shadow-lg p-6">
+<h3 class="text-xl text-yellow-400 font-bold mb-3">$500,000+ raised</h3>
+<p>Technoblade helped raise half million usd + for the sarcoma foundation of america through his "so long nerds..." video and community efforts</p>
+</div>
+<div class="rounded-lg bg-gray-800 p-6 shadow-lg">
+<h3 class="mb-3 font-bold text-yellow-400 text-xl">10m+ subs</h3>
+<p>His youtube channel reached the diamond play button milestone before his passing</p>
+</div>
+<div class="p-6 shadow-lg bg-gray-800 rounded-lg">
+<h3 class="text-xl mb-3 text-yellow-400 font-bold">1,600 win streak</h3>
+<p>His legendary 1600+ bedwars winstreak on hypixel remains one of the most impressive minecraft achievements which is unbreaten till date</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="quotes" class="bg-gray-800 py-16">
+<div class="container px-4 mx-auto">
+<h2 class="mb-12 text-3xl text-center font-bold">iconic quotes</h2>
+<div class="rounded-lg max-w-3xl p-8 bg-gray-700 mx-auto">
+<div class="quote" id="quote1">
+<p class="mb-4 italic text-xl">"Technoblade never dies!"</p>
+<p class="text-yellow-400 text-right">- technoblade</p>
+</div>
+<div class="hidden quote" id="quote2">
+<p class="mb-4 italic text-xl">"if you wish to defeat me, train for another 100 years."</p>
+<p class="text-yellow-400 text-right">- technoblade</p>
+</div>
+<div class="quote hidden" id="quote3">
+<p class="mb-4 italic text-xl">"i have a perfect plan: i'm going to kill them with kindness... and this sword i found."</p>
+<p class="text-yellow-400 text-right">- technoblade</p>
+</div>
+<div class="gap-2 mt-6 justify-center flex">
+<button class="w-3 h-3 bg-gray-600 rounded-full focus:bg-yellow-500" onclick="showquote(1)"></button>
+<button class="w-3 h-3 focus:bg-yellow-500 bg-gray-600 rounded-full" onclick="showquote(2)"></button>
+<button onclick="showquote(3)" class="bg-gray-600 rounded-full w-3 h-3 focus:bg-yellow-500"></button>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="bg-gray-900 py-16" id="tribute">
+<div class="max-w-2xl container px-4 mx-auto">
+<h2 class="font-bold mb-8 text-center text-3xl">leave a tribute</h2>
+<form class="bg-gray-800 rounded-lg shadow-lg p-6">
+<div class="mb-4">
+<label class="mb-2 block" for="name">your name</label>
+<input class="p-2 border w-full bg-gray-700 border-gray-600 rounded" id="name" type="text">
+</div>
+<div class="mb-4">
+<label class="block mb-2" for="message">your message</label>
+<textarea rows="4" class="w-full border p-2 rounded border-gray-600 bg-gray-700" id="message"></textarea>
+</div>
+<button type="submit" class="font-bold text-white px-4 rounded bg-red-700 hover:bg-red-600 py-2 w-full">submit tribute</button>
+</form>
+</div>
+</section>
+
+<footer class="py-8 bg-red-900">
+<div class="px-4 container mx-auto">
+<div class="items-center flex md:flex-row flex-col justify-between">
+<div class="mb-4 md:mb-0">
+<h2 class="text-xl font-bold">Technoblade never dies</h2>
+<p class="text-sm">honoring the blood god's legacy</p>
+</div>
+
+<div class="gap-4 flex">
+<a class="hover:text-yellow-300" href="https://youtube.com/technoblade">Youtube</a>
+<a href="https://twitter.com/technothepig" class="hover:text-yellow-300">Twitter</a>
+<a class="hover:text-yellow-300" href="https://technoblade.com">official site</a>
+</div>
+</div>
+<div class="text-sm text-center mt-8">
+<p>made with love by a fan for hack club grub</p>
+</div>
+</div>
+</footer>
+
+<script src = "script.js">
+
+</script>
+</body>
+</html>
